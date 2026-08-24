@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0d1117">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Terraria Guide">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="stylesheet" href="styles.css">
+<title>Terraria + Calamity Companion</title>
+</head>
+<body>
+<div id="app">
+<header class="topbar">
+  <div>
+    <div class="eyebrow">TERRARIA + CALAMITY</div>
+    <h1>Companion</h1>
+  </div>
+  <button class="iconbtn" id="settingsBtn" aria-label="Settings">⚙︎</button>
+</header>
+
+<main>
+  <section id="dashboard" class="view active"></section>
+  <section id="progress" class="view"></section>
+  <section id="loadout" class="view"></section>
+  <section id="explore" class="view"></section>
+  <section id="wiki" class="view"></section>
+</main>
+
+<nav class="bottomnav">
+  <button data-view="dashboard" class="active"><span>⌂</span>Home</button>
+  <button data-view="progress"><span>✓</span>Progress</button>
+  <button data-view="loadout"><span>⚔</span>Loadout</button>
+  <button data-view="explore"><span>◈</span>Explore</button>
+  <button data-view="wiki"><span>⌕</span>Wiki</button>
+</nav>
+
+<div class="sheetBackdrop" id="sheetBackdrop"></div>
+<aside class="sheet" id="settingsSheet">
+  <div class="sheetHandle"></div>
+  <div class="sheetHeader"><h2>Playthrough</h2><button class="iconbtn" id="closeSettings">×</button></div>
+  <label>World / character name<input id="worldName" placeholder="My Calamity run"></label>
+  <div class="two">
+    <label>Class<select id="classSelect"><option>Melee</option><option>Ranged</option><option>Magic</option><option>Summoner</option><option>Rogue</option><option>Mixed</option></select></label>
+    <label>Difficulty<select id="difficultySelect"><option>Classic</option><option>Expert</option><option>Master</option><option>Revengeance</option><option>Death</option></select></label>
+  </div>
+  <label>World evil<select id="evilSelect"><option>Corruption</option><option>Crimson</option></select></label>
+  <button class="primary full" id="exportBtn">Export save backup</button>
+  <label class="fileLabel">Import save backup<input type="file" id="importFile" accept=".json,application/json"></label>
+  <button class="danger full" id="resetBtn">Reset app data</button>
+  <p class="fineprint">Your progress stays on this device unless you export a backup.</p>
+</aside>
+</div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

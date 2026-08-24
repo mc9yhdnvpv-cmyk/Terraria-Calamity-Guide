@@ -1,0 +1,10 @@
+{
+  "name": "Terraria + Calamity Companion",
+  "short_name": "Terraria Guide",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117",
+  "description": "Progression, loadout, POI and official-wiki companion for Terraria + Calamity."
+}
